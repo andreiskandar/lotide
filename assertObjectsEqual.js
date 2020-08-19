@@ -1,11 +1,3 @@
-const assertEqual = (actual, expected) => {
-	if (actual === expected) {
-		console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-	} else {
-		console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
-	}
-};
-
 const eqArrays = (arr1, arr2) => {
 	if (arr1.length !== arr2.length) return false;
 	return arr1.every((el, index) => el === arr2[index]);
@@ -28,11 +20,12 @@ const eqObjects = (object1, object2) => {
 			if (!eqArrays(object1[item], object2[item])) return false;
 		}
 
-		// check if value is an object - recursively
+		// check if both value are objects
 		else if (
 			typeof object1[item] === 'object' &&
 			typeof object2[item] === 'object'
 		) {
+			// recursively check if they are value of the objects are equal
 			if (!eqObjects(object1[item], object2[item])) return false;
 		}
 
@@ -44,20 +37,20 @@ const eqObjects = (object1, object2) => {
 	return true;
 };
 
-// const obj1 = { a: 1, b: 2 },
-// 	obj2 = { b: 2, a: 1 };
+const assertObjectsEqual = (actual, expected) => {
+	const inspect = require('util').inspect;
+	if (eqObjects(actual, expected)) {
+		console.log(
+			`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
+		);
+	} else {
+		console.log(
+			`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`
+		);
+	}
+};
 
-// console.log('primitive value', eqObjects(obj1, obj2));
+const actual = { a: 1, b: 2 };
+const expected = { a: 1, b: 2 };
 
-const objWithArray1 = { c: '1', d: ['2', 3], e: [1, 2] },
-	objWithArray2 = { d: ['2', 3], c: '1', e: [1, 2] };
-
-console.log('value with an array: ', eqObjects(objWithArray1, objWithArray2));
-
-const objWithObject1 = { c: { test: 'objects' }, d: ['2', 3], a: 1 },
-	objWithObject2 = { d: ['2', 3], c: { test: 'objects' }, a: 1 };
-
-console.log(
-	'value with an object: ',
-	eqObjects(objWithObject1, objWithObject2)
-);
+assertObjectsEqual(actual, expected);
