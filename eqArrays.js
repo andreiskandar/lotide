@@ -1,5 +1,5 @@
-const assertEqual = (actual, expected) => {
-	if (actual === expected) {
+const assertEqual = (actual, expected, behaviour) => {
+	if (behaviour(actual, expected)) {
 		console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
 	} else {
 		console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
