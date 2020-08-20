@@ -28,11 +28,12 @@ const eqObjects = (object1, object2) => {
 			if (!eqArrays(object1[item], object2[item])) return false;
 		}
 
-		// check if value is an object - recursively
+		// check if both value are objects
 		else if (
 			typeof object1[item] === 'object' &&
 			typeof object2[item] === 'object'
 		) {
+			// recursively check if they are value of the objects are equal
 			if (!eqObjects(object1[item], object2[item])) return false;
 		}
 
