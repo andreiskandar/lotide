@@ -42,6 +42,5 @@ assertEqual(
 		},
 		x => x.stars === 2
 	),
-	'noma',
-	eqArrays
+	'noma'
 );
