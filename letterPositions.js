@@ -10,20 +10,18 @@ const assertArraysEqual = (arr1, arr2) => {
 		: console.log(`🛑🛑🛑 Assertion Failed: "${arr1}" !== "${arr2}"`);
 };
 
-const letterPositions = (sentence) => {
+const letterPositions = sentence => {
 	const results = {};
 	let tempArrayIdx = [];
 
 	//remove space and split characters from sentence
-	const newStr = sentence
-		.replace(/\s/g, (char) => char.replace(char, ''))
-		.split('');
+	const newStr = sentence.replace(/\s/g, char => char.replace(char, '')).split('');
 
 	// created set key for each character
 	const setStr = [...new Set(newStr)];
 
 	// find the index of char then push it into array
-	const newMap = setStr.map((char) => {
+	const newMap = setStr.map(char => {
 		let array = newStr.map((charInSentence, idx) => {
 			if (char === charInSentence) {
 				tempArrayIdx.push(idx);

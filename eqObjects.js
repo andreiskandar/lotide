@@ -13,11 +13,7 @@ const eqArrays = (arr1, arr2) => {
 
 const eqObjects = (object1, object2) => {
 	//compare data types and length of its keys
-	if (
-		typeof object1 !== typeof object2 ||
-		Object.keys(object1).length !== Object.keys(object2).length
-	)
-		return false;
+	if (typeof object1 !== typeof object2 || Object.keys(object1).length !== Object.keys(object2).length) return false;
 
 	for (let item in object1) {
 		if (!object2.hasOwnProperty(item)) return false;
@@ -29,10 +25,7 @@ const eqObjects = (object1, object2) => {
 		}
 
 		// check if both value are objects
-		else if (
-			typeof object1[item] === 'object' &&
-			typeof object2[item] === 'object'
-		) {
+		else if (typeof object1[item] === 'object' && typeof object2[item] === 'object') {
 			// recursively check if they are value of the objects are equal
 			if (!eqObjects(object1[item], object2[item])) return false;
 		}
@@ -58,7 +51,4 @@ console.log('value with an array: ', eqObjects(objWithArray1, objWithArray2));
 const objWithObject1 = { c: { test: 'objects' }, d: ['2', 3], a: 1 },
 	objWithObject2 = { d: ['2', 3], c: { test: 'objects' }, a: 1 };
 
-console.log(
-	'value with an object: ',
-	eqObjects(objWithObject1, objWithObject2)
-);
+console.log('value with an object: ', eqObjects(objWithObject1, objWithObject2));

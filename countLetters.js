@@ -8,7 +8,7 @@ const assertEqual = (actual, expected) => {
 
 function countLetters(str) {
 	//remove space
-	const newStr = str.replace(/\s/g, (char) => char.replace(char, ''));
+	const newStr = str.replace(/\s/g, char => char.replace(char, ''));
 	const tally = {};
 	for (let char of newStr) {
 		tally[char] = (tally[char] || 0) + 1;

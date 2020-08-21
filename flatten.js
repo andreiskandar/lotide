@@ -4,11 +4,9 @@
 
 // flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
 
-const flatten = (arr) => {
+const flatten = arr => {
 	let flatArr = [];
-	arr.forEach((item) =>
-		Array.isArray(item) ? flatArr.push(...flatten(item)) : flatArr.push(item)
-	);
+	arr.forEach(item => (Array.isArray(item) ? flatArr.push(...flatten(item)) : flatArr.push(item)));
 	return flatArr;
 };
 

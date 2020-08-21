@@ -37,8 +37,4 @@ console.log(map(words, getThirdLetter));
 
 assertEqual(map(words, getFirstLetter), ['g', 'c', 't', 'm', 't'], eqArrays);
 assertEqual(map(words, getLastLetter), ['d', 'l', 'o', 'r', 'm'], eqArrays);
-assertEqual(
-	map(words, getThirdLetter),
-	['o', 'n', undefined, 'j', 'm'],
-	eqArrays
-);
+assertEqual(map(words, getThirdLetter), ['o', 'n', undefined, 'j', 'm'], eqArrays);

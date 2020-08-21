@@ -25,7 +25,7 @@ const findKeyByValue = (obj, titleName) => {
 	// }
 
 	//using filter
-	return keys.filter((genre) => obj[genre] === titleName);
+	return keys.filter(genre => obj[genre] === titleName);
 
 	// for (const genre in obj) {
 	// 	if (obj[genre] === title) return genre;
