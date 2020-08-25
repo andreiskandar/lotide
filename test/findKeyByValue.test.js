@@ -16,7 +16,7 @@ describe('#findKeyByValue()', () => {
 
 	it("should return 'drama' when given obj: { sci_fi: 'The Expanse', comedy: 'Brooklyn Nine-Nine', drama: 'The Wire' }", () => {
 		const actual = _.findKeyByValue(bestTVShowsByGenre, 'That "70s Show');
-		const expected = 'undefined';
-		assert.isNull(actual);
+		const expected = [];
+		assert.deepEqual(actual, expected);
 	});
 });
