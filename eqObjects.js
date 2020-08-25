@@ -1,19 +1,12 @@
-const assertEqual = (actual, expected, behaviour) => {
-	if (behaviour(actual, expected)) {
-		console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-	} else {
-		console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
-	}
-};
-
-const eqArrays = (arr1, arr2) => {
-	if (arr1.length !== arr2.length) return false;
-	return arr1.every((el, index) => el === arr2[index]);
-};
+const eqArrays = require('./eqArrays');
 
 const eqObjects = (object1, object2) => {
 	//compare data types and length of its keys
-	if (typeof object1 !== typeof object2 || Object.keys(object1).length !== Object.keys(object2).length) return false;
+	if (
+		typeof object1 !== typeof object2 ||
+		Object.keys(object1).length !== Object.keys(object2).length
+	)
+		return false;
 
 	for (let item in object1) {
 		if (!object2.hasOwnProperty(item)) return false;
@@ -38,17 +31,4 @@ const eqObjects = (object1, object2) => {
 	return true;
 };
 
-// const obj1 = { a: 1, b: 2 },
-// 	obj2 = { b: 2, a: 1 };
-
-// console.log('primitive value', eqObjects(obj1, obj2));
-
-const objWithArray1 = { c: '1', d: ['2', 3], e: [1, 2] },
-	objWithArray2 = { d: ['2', 3], c: '1', e: [1, 2] };
-
-console.log('value with an array: ', eqObjects(objWithArray1, objWithArray2));
-
-const objWithObject1 = { c: { test: 'objects' }, d: ['2', 3], a: 1 },
-	objWithObject2 = { d: ['2', 3], c: { test: 'objects' }, a: 1 };
-
-console.log('value with an object: ', eqObjects(objWithObject1, objWithObject2));
+module.exports = eqObjects;
