@@ -1,3 +1,4 @@
+const map = require('./map');
 const tail = require('./tail');
 const head = require('./head');
 const middle = require('./middle');
@@ -7,10 +8,11 @@ const countOnly = require('./countOnly');
 const eqObjects = require('./eqObjects');
 const takeUntil = require('./takeUntil');
 const countLetters = require('./countLetters');
-const letterPositions = require('./letterPositions');
 const findKeyByValue = require('./findKeyByValue');
+const letterPositions = require('./letterPositions');
 
 module.exports = {
+	map,
 	tail,
 	head,
 	middle,

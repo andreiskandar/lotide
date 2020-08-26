@@ -16,11 +16,3 @@ describe('#takeUntil()', () => {
 		assert.deepEqual(actual, expected);
 	});
 });
-
-// console.log(result1);
-// console.log('----------');
-// console.log(results2);
-
-// assertEqual(result1, [1, 2, 5, 7, 2], eqArrays);
-
-// assertEqual(results2, ["I've", 'been', 'to', 'Hollywood'], eqArrays);
