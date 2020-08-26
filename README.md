@@ -26,6 +26,15 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-- `function1(...)`: description
-- `function2(...)`: description
-- `function3(...)`: description
+- `map(array.., callback)`:
+- `tail(array)`:
+- `head(array)`:
+- `middle(array)` :
+- `flatten(nested array)` :
+- `eqArrays(arr1, arr2)` :
+- `countOnly()` :
+- `eqObjects()` :
+- `takeUntil()` :
+- `countLetters()` :
+- `findKeyByValue()` :
+- `letterPositions()` :
