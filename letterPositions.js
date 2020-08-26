@@ -1,15 +1,3 @@
-// const eqArrays = (arr1, arr2) => {
-// 	//check the length arr1 & arr2
-// 	if (arr1.length !== arr2.length) return false;
-// 	return arr1.every((el, index) => el === arr2[index]);
-// };
-
-// const assertArraysEqual = (arr1, arr2) => {
-// 	return eqArrays(arr1, arr2)
-// 		? console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`)
-// 		: console.log(`🛑🛑🛑 Assertion Failed: "${arr1}" !== "${arr2}"`);
-// };
-
 const letterPositions = sentence => {
 	const results = {};
 	let tempArrayIdx = [];
@@ -40,18 +28,3 @@ const letterPositions = sentence => {
 };
 
 module.exports = letterPositions;
-
-// function findNextIndex(char, currIndex, sentence) {
-// 	return sentence.indexOf(char, currIndex + 1);
-// }
-
-// function storeIndexIntoArray(index) {
-// 	let array = [];
-// 	array.push(index);
-// 	return array;
-// }
-
-// console.log(letterPositions('lighthouse in the house'));
-// console.log(letterPositions('ehoellhoe'));
-
-// assertArraysEqual(letterPositions('hello').e, [1]);
