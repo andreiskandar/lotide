@@ -1,13 +1,13 @@
 const takeUntil = (array, callback) => {
-	const outputArr = [];
-	for (let el of array) {
-		if (callback(el)) {
-			break;
-		}
-		outputArr.push(el);
-	}
+  const outputArr = [];
+  for (let el of array) {
+    if (callback(el)) {
+      break;
+    }
+    outputArr.push(el);
+  }
 
-	return outputArr;
+  return outputArr;
 };
 
 module.exports = takeUntil;

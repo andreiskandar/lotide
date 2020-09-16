@@ -1,26 +1,26 @@
 {
-	"name": "@andreiskandar/lotide",
-	"version": "1.0.0",
-	"description": "mini version of lodash",
-	"main": "./lotide/index.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "mocha"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/andreiskandar/lotide.git"
-	},
-	"author": "Andre Iskandar",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/andreiskandar/lotide/issues"
-	},
-	"homepage": "https://github.com/andreiskandar/lotide#readme",
-	"devDependencies": {
-		"chai": "^4.2.0",
-		"mocha": "^8.1.1"
-	}
+  "name": "@andreiskandar/lotide",
+  "version": "1.0.0",
+  "description": "mini version of lodash",
+  "main": "./lotide/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreiskandar/lotide.git"
+  },
+  "author": "Andre Iskandar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreiskandar/lotide/issues"
+  },
+  "homepage": "https://github.com/andreiskandar/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1"
+  }
 }
